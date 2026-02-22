@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IEC2 Component Registry</title>
+    <title data-i18n="site.title">IEC2 Component Registry</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -12,12 +12,18 @@
             <div class="header-content">
                 <div class="logo">
                     <h1>IEC2 Registry</h1>
-                    <span class="subtitle">IEC 61131-3 Component Marketplace</span>
+                    <span class="subtitle" data-i18n="site.subtitle">IEC 61131-3 Component Marketplace</span>
                 </div>
                 <nav>
-                    <a href="https://github.com/suifei/iec2" target="_blank">IECC2 Compiler</a>
-                    <a href="https://github.com/suifei/iec2-registry" target="_blank">GitHub</a>
-                    <a href="#contribute">Contribute</a>
+                    <a href="https://github.com/suifei/iec2" target="_blank" data-i18n="nav.compiler">IECC2 Compiler</a>
+                    <a href="https://github.com/suifei/iec2-registry" target="_blank" data-i18n="nav.github">GitHub</a>
+                    <a href="#contribute" data-i18n="nav.contribute">Contribute</a>
+                    <select id="langSwitcher" class="lang-switcher">
+                        <option value="en">English</option>
+                        <option value="zh-cn">中文</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                    </select>
                 </nav>
             </div>
         </div>
@@ -25,21 +31,21 @@
 
     <main class="container">
         <section class="hero">
-            <h2>Industrial PLC Components, Ready to Use</h2>
-            <p>Browse, search, and install IEC 61131-3 function blocks and libraries directly from your VS Code IDE.</p>
+            <h2 data-i18n="hero.title">Industrial PLC Components, Ready to Use</h2>
+            <p data-i18n="hero.description">Browse, search, and install IEC 61131-3 function blocks and libraries directly from your VS Code IDE.</p>
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search packages... (e.g. PID, Modbus, MQTT)" autofocus>
+                <input type="text" id="searchInput" data-i18n-placeholder="hero.searchPlaceholder" placeholder="Search packages... (e.g. PID, Modbus, MQTT)" autofocus>
             </div>
             <div class="stats" id="stats"></div>
         </section>
 
         <section class="categories" id="categories">
-            <h3>Categories</h3>
+            <h3 data-i18n="categories.title">Categories</h3>
             <div class="category-grid" id="categoryGrid"></div>
         </section>
 
         <section class="packages">
-            <h3>All Packages</h3>
+            <h3 data-i18n="packages.title">All Packages</h3>
             <div class="package-grid" id="packageGrid"></div>
         </section>
 
@@ -48,42 +54,43 @@
         </section>
 
         <section id="contribute" class="contribute">
-            <h3>Contribute a Package</h3>
+            <h3 data-i18n="contribute.title">Contribute a Package</h3>
             <div class="steps">
                 <div class="step">
                     <div class="step-num">1</div>
-                    <h4>Create Package</h4>
-                    <p>Write your function blocks in IEC 61131-3 ST, create a <code>manifest.json</code>, and package as <code>.ieclib</code> (ZIP).</p>
+                    <h4 data-i18n="contribute.step1.title">Create Package</h4>
+                    <p data-i18n="contribute.step1.desc">Write your function blocks in IEC 61131-3 ST, create a <code>manifest.json</code>, and package as <code>.ieclib</code> (ZIP).</p>
                 </div>
                 <div class="step">
                     <div class="step-num">2</div>
-                    <h4>Fork &amp; PR</h4>
-                    <p>Fork <a href="https://github.com/suifei/iec2-registry">iec2-registry</a>, add your package to <code>packages/</code>, and submit a Pull Request.</p>
+                    <h4 data-i18n="contribute.step2.title">Fork &amp; PR</h4>
+                    <p data-i18n="contribute.step2.desc">Fork <a href="https://github.com/suifei/iec2-registry">iec2-registry</a>, add your package to <code>packages/</code>, and submit a Pull Request.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">3</div>
-                    <h4>Auto Publish</h4>
-                    <p>CI validates your package. Once merged, it appears in the registry and VS Code extension automatically.</p>
+                    <h4 data-i18n="contribute.step3.title">Auto Publish</h4>
+                    <p data-i18n="contribute.step3.desc">CI validates your package. Once merged, it appears in the registry and VS Code extension automatically.</p>
                 </div>
             </div>
         </section>
 
         <section class="install-guide">
-            <h3>Install from VS Code</h3>
+            <h3 data-i18n="install.title">Install from VS Code</h3>
             <div class="code-block">
-                <code>Ctrl+Shift+P &rarr; IEC: Manage Libraries &rarr; Online &rarr; Search &amp; Install</code>
+                <code data-i18n="install.cmd">Ctrl+Shift+P &rarr; IEC: Manage Libraries &rarr; Online &rarr; Search &amp; Install</code>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 IECC2 Project &middot; IEC 61131-3 PLC Development Toolchain &middot;
+            <p><span data-i18n="footer.text">&copy; 2026 IECC2 Project &middot; IEC 61131-3 PLC Development Toolchain &middot;</span>
                 <a href="https://github.com/suifei/iec2">GitHub</a>
             </p>
         </div>
     </footer>
 
+    <script src="assets/i18n.js"></script>
     <script src="assets/app.js"></script>
 </body>
 </html>

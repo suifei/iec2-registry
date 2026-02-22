@@ -1,0 +1,42 @@
+{
+  "site.title": "IEC2 组件注册表",
+  "site.subtitle": "IEC 61131-3 组件市场",
+  "nav.compiler": "IECC2 编译器",
+  "nav.github": "GitHub",
+  "nav.contribute": "贡献",
+
+  "hero.title": "工业 PLC 组件，即装即用",
+  "hero.description": "浏览、搜索和安装 IEC 61131-3 功能块和库，直接从 VS Code IDE 使用。",
+  "hero.searchPlaceholder": "搜索组件包...（如 PID、Modbus、MQTT）",
+  "hero.stats": "{packages} 个组件包 · {pous} 个 POUs · {categories} 个分类",
+
+  "categories.title": "分类",
+  "categories.all": "全部",
+
+  "packages.title": "所有组件包",
+  "packages.noResults": "未找到组件包。",
+  "packages.pous": "{n} 个 POUs",
+
+  "detail.installCmd": "IEC: 安装库 →",
+  "detail.author": "作者：",
+  "detail.platforms": "平台：",
+  "detail.pouTableName": "名称",
+  "detail.pouTableType": "类型",
+  "detail.pouType.fb": "功能块",
+  "detail.download": "下载 .ieclib",
+  "detail.docs": "文档",
+  "detail.readme": "自述文件",
+
+  "contribute.title": "贡献组件包",
+  "contribute.step1.title": "创建组件包",
+  "contribute.step1.desc": "使用 IEC 61131-3 ST 编写功能块，创建 manifest.json，打包为 .ieclib（ZIP）。",
+  "contribute.step2.title": "Fork 并提交 PR",
+  "contribute.step2.desc": "Fork iec2-registry 仓库，将组件包添加到 packages/ 目录，提交 Pull Request。",
+  "contribute.step3.title": "自动发布",
+  "contribute.step3.desc": "CI 会验证组件包格式。合并后，组件包将自动出现在注册表和 VS Code 扩展中。",
+
+  "install.title": "从 VS Code 安装",
+  "install.cmd": "Ctrl+Shift+P → IEC: 管理库 → 在线 → 搜索并安装",
+
+  "footer.text": "© 2026 IECC2 项目 · IEC 61131-3 PLC 开发工具链 ·"
+}

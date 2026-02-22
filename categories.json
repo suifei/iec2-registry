@@ -3,39 +3,69 @@
   "categories": [
     {
       "id": "control",
-      "name": "Control",
+      "name": { "en": "Control", "zh-cn": "控制", "de": "Steuerung", "ja": "制御" },
       "icon": "sliders",
-      "description": "PID controllers, ramps, scaling, and process control"
+      "description": {
+        "en": "PID controllers, ramps, scaling, and process control",
+        "zh-cn": "PID 控制器、斜坡、缩放和过程控制",
+        "de": "PID-Regler, Rampen, Skalierung und Prozesssteuerung",
+        "ja": "PIDコントローラ、ランプ、スケーリング、プロセス制御"
+      }
     },
     {
       "id": "protocol",
-      "name": "Communication Protocols",
+      "name": { "en": "Communication Protocols", "zh-cn": "通信协议", "de": "Kommunikationsprotokolle", "ja": "通信プロトコル" },
       "icon": "wifi",
-      "description": "Industrial communication protocol libraries"
+      "description": {
+        "en": "Industrial communication protocol libraries",
+        "zh-cn": "工业通信协议库",
+        "de": "Industrielle Kommunikationsprotokoll-Bibliotheken",
+        "ja": "産業用通信プロトコルライブラリ"
+      }
     },
     {
       "id": "safety",
-      "name": "Safety",
+      "name": { "en": "Safety", "zh-cn": "安全", "de": "Sicherheit", "ja": "安全" },
       "icon": "shield",
-      "description": "Safety-related function blocks per IEC 61508/62061"
+      "description": {
+        "en": "Safety-related function blocks per IEC 61508/62061",
+        "zh-cn": "符合 IEC 61508/62061 的安全相关功能块",
+        "de": "Sicherheitsbezogene Funktionsbausteine nach IEC 61508/62061",
+        "ja": "IEC 61508/62061に準拠した安全関連ファンクションブロック"
+      }
     },
     {
       "id": "motion",
-      "name": "Motion Control",
+      "name": { "en": "Motion Control", "zh-cn": "运动控制", "de": "Bewegungssteuerung", "ja": "モーション制御" },
       "icon": "move",
-      "description": "PLCopen-compatible motion control function blocks"
+      "description": {
+        "en": "PLCopen-compatible motion control function blocks",
+        "zh-cn": "兼容 PLCopen 的运动控制功能块",
+        "de": "PLCopen-kompatible Bewegungssteuerungs-Funktionsbausteine",
+        "ja": "PLCopen互換モーション制御ファンクションブロック"
+      }
     },
     {
       "id": "math",
-      "name": "Mathematics",
+      "name": { "en": "Mathematics", "zh-cn": "数学", "de": "Mathematik", "ja": "数学" },
       "icon": "bar-chart",
-      "description": "Extended math, filters, interpolation, statistics"
+      "description": {
+        "en": "Extended math, filters, interpolation, statistics",
+        "zh-cn": "扩展数学、滤波器、插值、统计",
+        "de": "Erweiterte Mathematik, Filter, Interpolation, Statistik",
+        "ja": "拡張数学、フィルタ、補間、統計"
+      }
     },
     {
       "id": "utility",
-      "name": "Utilities",
+      "name": { "en": "Utilities", "zh-cn": "工具", "de": "Hilfsprogramme", "ja": "ユーティリティ" },
       "icon": "tool",
-      "description": "Data logging, string manipulation, and general utilities"
+      "description": {
+        "en": "Data logging, string manipulation, and general utilities",
+        "zh-cn": "数据记录、字符串处理和通用工具",
+        "de": "Datenprotokollierung, String-Verarbeitung und allgemeine Hilfsprogramme",
+        "ja": "データロギング、文字列操作、汎用ユーティリティ"
+      }
     }
   ]
 }

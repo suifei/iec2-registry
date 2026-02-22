@@ -1,0 +1,42 @@
+{
+  "site.title": "IEC2 Component Registry",
+  "site.subtitle": "IEC 61131-3 Component Marketplace",
+  "nav.compiler": "IECC2 Compiler",
+  "nav.github": "GitHub",
+  "nav.contribute": "Contribute",
+
+  "hero.title": "Industrial PLC Components, Ready to Use",
+  "hero.description": "Browse, search, and install IEC 61131-3 function blocks and libraries directly from your VS Code IDE.",
+  "hero.searchPlaceholder": "Search packages... (e.g. PID, Modbus, MQTT)",
+  "hero.stats": "{packages} packages · {pous} POUs · {categories} categories",
+
+  "categories.title": "Categories",
+  "categories.all": "All",
+
+  "packages.title": "All Packages",
+  "packages.noResults": "No packages found.",
+  "packages.pous": "{n} POUs",
+
+  "detail.installCmd": "IEC: Install Library →",
+  "detail.author": "Author:",
+  "detail.platforms": "Platforms:",
+  "detail.pouTableName": "Name",
+  "detail.pouTableType": "Type",
+  "detail.pouType.fb": "Function Block",
+  "detail.download": "Download .ieclib",
+  "detail.docs": "Documentation",
+  "detail.readme": "README",
+
+  "contribute.title": "Contribute a Package",
+  "contribute.step1.title": "Create Package",
+  "contribute.step1.desc": "Write your function blocks in IEC 61131-3 ST, create a manifest.json, and package as .ieclib (ZIP).",
+  "contribute.step2.title": "Fork & PR",
+  "contribute.step2.desc": "Fork iec2-registry, add your package to packages/, and submit a Pull Request.",
+  "contribute.step3.title": "Auto Publish",
+  "contribute.step3.desc": "CI validates your package. Once merged, it appears in the registry and VS Code extension automatically.",
+
+  "install.title": "Install from VS Code",
+  "install.cmd": "Ctrl+Shift+P → IEC: Manage Libraries → Online → Search & Install",
+
+  "footer.text": "© 2026 IECC2 Project · IEC 61131-3 PLC Development Toolchain ·"
+}

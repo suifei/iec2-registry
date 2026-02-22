@@ -1,3 +1,5 @@
+**English** | [中文](README.zh-cn.md) | [Deutsch](README.de.md) | [日本語](README.ja.md)
+
 # IEC2 Component Registry
 
 Public component registry for the [IECC2 PLC development toolchain](https://github.com/suifei/iec2).

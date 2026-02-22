@@ -54,7 +54,7 @@ header {
     margin-left: 12px;
 }
 
-nav { display: flex; gap: 20px; }
+nav { display: flex; gap: 20px; align-items: center; }
 
 nav a {
     color: var(--text-secondary);
@@ -63,6 +63,23 @@ nav a {
     transition: color 0.2s;
 }
 nav a:hover { color: var(--accent); }
+
+.lang-switcher {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    background: var(--bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.lang-switcher:hover,
+.lang-switcher:focus {
+    border-color: var(--accent);
+    color: var(--text);
+}
 
 /* Hero */
 .hero {

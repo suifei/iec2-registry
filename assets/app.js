@@ -1,13 +1,13 @@
 (function() {
     'use strict';
 
-    let registry = { packages: [] };
-    let categories = { categories: [] };
-    let activeCategory = null;
+    var registry = { packages: [] };
+    var categories = { categories: [] };
+    var activeCategory = null;
 
     async function init() {
         try {
-            const [regRes, catRes] = await Promise.all([
+            var [regRes, catRes] = await Promise.all([
                 fetch('registry.json'),
                 fetch('categories.json')
             ]);
@@ -17,54 +17,23 @@
             console.error('Failed to load registry:', e);
         }
 
+        await window.I18n.init();
+
         renderStats();
         renderCategories();
         renderPackages(registry.packages);
         setupSearch();
-    }
 
-    function renderStats() {
-        const el = document.getElementById('stats');
-        const pouCount = registry.packages.reduce(function(sum, p) {
-            return sum + (p.pous ? p.pous.length : 0);
-        }, 0);
-        el.textContent = registry.packages.length + ' packages \u00b7 ' + pouCount + ' POUs \u00b7 ' +
-            categories.categories.length + ' categories';
-    }
-
-    function renderCategories() {
-        const grid = document.getElementById('categoryGrid');
-
-        var chip = document.createElement('span');
-        chip.className = 'category-chip active';
-        chip.textContent = 'All';
-        chip.dataset.id = '';
-        chip.addEventListener('click', function() { filterByCategory(null); });
-        grid.appendChild(chip);
-
-        categories.categories.forEach(function(cat) {
-            var count = registry.packages.filter(function(p) {
-                return p.category === cat.id;
-            }).length;
-
-            var c = document.createElement('span');
-            c.className = 'category-chip';
-            c.dataset.id = cat.id;
-            c.innerHTML = cat.name + ' <span class="count">' + count + '</span>';
-            c.addEventListener('click', function() { filterByCategory(cat.id); });
-            grid.appendChild(c);
+        window.I18n.onLocaleChange(function() {
+            renderStats();
+            renderCategories();
+            renderPackages(getFilteredPackages());
         });
     }
 
-    function filterByCategory(catId) {
-        activeCategory = catId;
-
-        document.querySelectorAll('.category-chip').forEach(function(el) {
-            el.classList.toggle('active', el.dataset.id === (catId || ''));
-        });
-
-        var filtered = catId ?
-            registry.packages.filter(function(p) { return p.category === catId; }) :
+    function getFilteredPackages() {
+        var filtered = activeCategory ?
+            registry.packages.filter(function(p) { return p.category === activeCategory; }) :
             registry.packages;
 
         var searchVal = document.getElementById('searchInput').value.toLowerCase();
@@ -76,8 +45,51 @@
                        (p.pous || []).some(function(pou) { return pou.toLowerCase().indexOf(searchVal) >= 0; });
             });
         }
+        return filtered;
+    }
 
-        renderPackages(filtered);
+    function renderStats() {
+        var el = document.getElementById('stats');
+        var pouCount = registry.packages.reduce(function(sum, p) {
+            return sum + (p.pous ? p.pous.length : 0);
+        }, 0);
+        el.textContent = window.I18n.t('hero.stats', {
+            packages: registry.packages.length,
+            pous: pouCount,
+            categories: categories.categories.length,
+        });
+    }
+
+    function renderCategories() {
+        var grid = document.getElementById('categoryGrid');
+        grid.innerHTML = '';
+
+        var chip = document.createElement('span');
+        chip.className = 'category-chip' + (activeCategory === null ? ' active' : '');
+        chip.textContent = window.I18n.t('categories.all');
+        chip.dataset.id = '';
+        chip.addEventListener('click', function() { filterByCategory(null); });
+        grid.appendChild(chip);
+
+        categories.categories.forEach(function(cat) {
+            var count = registry.packages.filter(function(p) {
+                return p.category === cat.id;
+            }).length;
+
+            var c = document.createElement('span');
+            c.className = 'category-chip' + (activeCategory === cat.id ? ' active' : '');
+            c.dataset.id = cat.id;
+            var catName = window.I18n.getLocalizedField(cat, 'name');
+            c.innerHTML = catName + ' <span class="count">' + count + '</span>';
+            c.addEventListener('click', function() { filterByCategory(cat.id); });
+            grid.appendChild(c);
+        });
+    }
+
+    function filterByCategory(catId) {
+        activeCategory = catId;
+        renderCategories();
+        renderPackages(getFilteredPackages());
     }
 
     function setupSearch() {
@@ -86,7 +98,7 @@
         input.addEventListener('input', function() {
             clearTimeout(timer);
             timer = setTimeout(function() {
-                filterByCategory(activeCategory);
+                renderPackages(getFilteredPackages());
             }, 200);
         });
     }
@@ -96,7 +108,8 @@
         grid.innerHTML = '';
 
         if (pkgs.length === 0) {
-            grid.innerHTML = '<p style="color: var(--text-secondary); grid-column: 1/-1; text-align: center; padding: 40px;">No packages found.</p>';
+            grid.innerHTML = '<p style="color: var(--text-secondary); grid-column: 1/-1; text-align: center; padding: 40px;">' +
+                window.I18n.t('packages.noResults') + '</p>';
             return;
         }
 
@@ -111,6 +124,7 @@
 
             var pouCount = pkg.pous ? pkg.pous.length : 0;
             var catLabel = categories.categories.find(function(c) { return c.id === pkg.category; });
+            var catName = catLabel ? window.I18n.getLocalizedField(catLabel, 'name') : pkg.category;
 
             card.innerHTML =
                 '<div class="pkg-header">' +
@@ -120,8 +134,8 @@
                 '<div class="pkg-desc">' + pkg.description + '</div>' +
                 '<div class="pkg-tags">' + tagsHtml + '</div>' +
                 '<div class="pkg-meta">' +
-                '  <span>' + (catLabel ? catLabel.name : pkg.category) + '</span>' +
-                '  <span class="pkg-pous">' + pouCount + ' POUs</span>' +
+                '  <span>' + catName + '</span>' +
+                '  <span class="pkg-pous">' + window.I18n.t('packages.pous', { n: pouCount }) + '</span>' +
                 '</div>';
 
             grid.appendChild(card);
@@ -135,11 +149,11 @@
         var pousHtml = '';
         if (pkg.pous && pkg.pous.length > 0) {
             var rows = pkg.pous.map(function(pou) {
-                return '<tr><td>' + pou + '</td><td>Function Block</td></tr>';
+                return '<tr><td>' + pou + '</td><td>' + window.I18n.t('detail.pouType.fb') + '</td></tr>';
             }).join('');
             pousHtml =
                 '<table class="pou-table">' +
-                '<thead><tr><th>Name</th><th>Type</th></tr></thead>' +
+                '<thead><tr><th>' + window.I18n.t('detail.pouTableName') + '</th><th>' + window.I18n.t('detail.pouTableType') + '</th></tr></thead>' +
                 '<tbody>' + rows + '</tbody></table>';
         }
 
@@ -152,14 +166,14 @@
             '<span class="version-badge">v' + pkg.version + '</span>' +
             ' <span class="version-badge" style="background:rgba(63,185,80,0.15);color:var(--green)">' + pkg.license + '</span>' +
             '<p class="desc">' + pkg.description + '</p>' +
-            '<div class="install-cmd">IEC: Install Library &rarr; ' + pkg.name + '</div>' +
+            '<div class="install-cmd">' + window.I18n.t('detail.installCmd') + ' ' + pkg.name + '</div>' +
             pousHtml +
             '<p style="font-size:0.8rem;color:var(--text-secondary);margin-bottom:8px">' +
-            'Author: ' + pkg.author + ' &middot; Platforms: ' + platformsText + '</p>' +
+            window.I18n.t('detail.author') + ' ' + pkg.author + ' &middot; ' + window.I18n.t('detail.platforms') + ' ' + platformsText + '</p>' +
             '<div class="btn-row">' +
-            '  <a href="' + (pkg.url || '#') + '" class="btn btn-primary" download>Download .ieclib</a>' +
-            '  <a href="' + (pkg.homepage || '#') + '" class="btn btn-secondary">Documentation</a>' +
-            '  <a href="packages/' + pkg.name + '/README.md" class="btn btn-secondary" target="_blank">README</a>' +
+            '  <a href="' + (pkg.url || '#') + '" class="btn btn-primary" download>' + window.I18n.t('detail.download') + '</a>' +
+            '  <a href="' + (pkg.homepage || '#') + '" class="btn btn-secondary">' + window.I18n.t('detail.docs') + '</a>' +
+            '  <a href="packages/' + pkg.name + '/README.md" class="btn btn-secondary" target="_blank">' + window.I18n.t('detail.readme') + '</a>' +
             '</div>' +
             '</div>';
 
