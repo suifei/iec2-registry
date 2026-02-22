@@ -1,0 +1,337 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-02-21T23:59:43Z",
+  "packages": [
+    {
+      "name": "iec-canopen",
+      "version": "1.0.0",
+      "description": "CANopen protocol — NMT master, SDO read/write, PDO mapping",
+      "author": "IECC2 Team",
+      "category": "protocol",
+      "tags": [
+        "canopen",
+        "can",
+        "nmt",
+        "sdo",
+        "pdo",
+        "fieldbus"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-canopen/iec-canopen-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-canopen",
+      "source": "",
+      "pous": [
+        "CANOPEN_MASTER",
+        "CANOPEN_NMT_SEND",
+        "CANOPEN_SDO_READ",
+        "CANOPEN_SDO_WRITE",
+        "CANOPEN_PDO_MAP"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "linux-x64",
+        "linux-arm64"
+      ],
+      "iecVersion": "3.0"
+    },
+    {
+      "name": "iec-datalog",
+      "version": "1.0.0",
+      "description": "Data logging — periodic logger, CSV writer, ring buffer, trend recorder, event logger",
+      "author": "IECC2 Team",
+      "category": "utility",
+      "tags": [
+        "logging",
+        "csv",
+        "trend",
+        "recorder",
+        "buffer"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-datalog/iec-datalog-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-datalog",
+      "source": "",
+      "pous": [
+        "DATA_LOGGER",
+        "CSV_WRITER",
+        "RING_BUFFER",
+        "TREND_RECORDER",
+        "EVENT_LOGGER"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "any"
+      ],
+      "iecVersion": "3.0"
+    },
+    {
+      "name": "iec-math-ext",
+      "version": "1.0.0",
+      "description": "Extended math — filters, interpolation, statistics, matrix, CRC",
+      "author": "IECC2 Team",
+      "category": "math",
+      "tags": [
+        "filter",
+        "interpolation",
+        "statistics",
+        "matrix",
+        "crc"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-math-ext/iec-math-ext-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-math-ext",
+      "source": "",
+      "pous": [
+        "MOVING_AVG",
+        "LOW_PASS_FILTER",
+        "HIGH_PASS_FILTER",
+        "LINEAR_INTERP",
+        "LOOKUP_TABLE",
+        "STATISTICS",
+        "MATRIX_MUL",
+        "CRC16",
+        "CRC32"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "any"
+      ],
+      "iecVersion": "3.0"
+    },
+    {
+      "name": "iec-modbus",
+      "version": "1.0.0",
+      "description": "Modbus TCP/RTU communication — client, register/coil read/write, serial RTU",
+      "author": "IECC2 Team",
+      "category": "protocol",
+      "tags": [
+        "modbus",
+        "tcp",
+        "rtu",
+        "serial",
+        "rs485"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-modbus/iec-modbus-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-modbus",
+      "source": "",
+      "pous": [
+        "MODBUS_TCP_CLIENT",
+        "MODBUS_READ_REGISTERS",
+        "MODBUS_WRITE_REGISTER",
+        "MODBUS_READ_COILS",
+        "MODBUS_WRITE_COIL",
+        "MODBUS_WRITE_MULTIPLE_COILS",
+        "MODBUS_RTU_CLIENT"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "linux-x64",
+        "linux-arm64",
+        "darwin-x64",
+        "darwin-arm64"
+      ],
+      "iecVersion": "3.0"
+    },
+    {
+      "name": "iec-motion",
+      "version": "1.0.0",
+      "description": "PLCopen motion control — MC_POWER, MC_MOVE_ABSOLUTE/RELATIVE, MC_STOP, MC_HOME",
+      "author": "IECC2 Team",
+      "category": "motion",
+      "tags": [
+        "plcopen",
+        "motion",
+        "axis",
+        "servo",
+        "drive"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-motion/iec-motion-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-motion",
+      "source": "",
+      "pous": [
+        "AXIS_REF",
+        "MC_POWER",
+        "MC_MOVE_ABSOLUTE",
+        "MC_MOVE_RELATIVE",
+        "MC_STOP",
+        "MC_HOME"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "any"
+      ],
+      "iecVersion": "3.0"
+    },
+    {
+      "name": "iec-mqtt",
+      "version": "1.0.0",
+      "description": "MQTT 3.1.1 client — connect, publish, subscribe, JSON publish",
+      "author": "IECC2 Team",
+      "category": "protocol",
+      "tags": [
+        "mqtt",
+        "iot",
+        "cloud",
+        "json",
+        "publish",
+        "subscribe"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-mqtt/iec-mqtt-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-mqtt",
+      "source": "",
+      "pous": [
+        "MQTT_CLIENT",
+        "MQTT_PUBLISH",
+        "MQTT_SUBSCRIBE",
+        "MQTT_JSON_PUBLISH"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "any"
+      ],
+      "iecVersion": "3.0"
+    },
+    {
+      "name": "iec-pid",
+      "version": "1.0.0",
+      "description": "PID control library — PID, PID_COMPACT, PID_AUTOTUNE, RAMP, HYSTERESIS, DEADBAND, SCALING",
+      "author": "IECC2 Team",
+      "category": "control",
+      "tags": [
+        "pid",
+        "control",
+        "autotune",
+        "ramp",
+        "scaling"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-pid/iec-pid-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-pid",
+      "source": "",
+      "pous": [
+        "PID",
+        "PID_COMPACT",
+        "PID_AUTOTUNE",
+        "RAMP",
+        "HYSTERESIS",
+        "DEADBAND",
+        "SCALING"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "any"
+      ],
+      "iecVersion": "3.0"
+    },
+    {
+      "name": "iec-s7comm",
+      "version": "1.0.0",
+      "description": "Siemens S7 communication — ISO-on-TCP, DB read/write, area read",
+      "author": "IECC2 Team",
+      "category": "protocol",
+      "tags": [
+        "siemens",
+        "s7",
+        "plc",
+        "iso-tcp",
+        "profinet"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-s7comm/iec-s7comm-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-s7comm",
+      "source": "",
+      "pous": [
+        "S7_CLIENT",
+        "S7_READ_DB",
+        "S7_WRITE_DB",
+        "S7_READ_AREA"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "any"
+      ],
+      "iecVersion": "3.0"
+    },
+    {
+      "name": "iec-safety",
+      "version": "1.0.0",
+      "description": "Safety function blocks — E-Stop, safety door, two-hand, muting, safe speed, watchdog",
+      "author": "IECC2 Team",
+      "category": "safety",
+      "tags": [
+        "safety",
+        "estop",
+        "sil",
+        "iec61508",
+        "watchdog"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-safety/iec-safety-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-safety",
+      "source": "",
+      "pous": [
+        "ESTOP_MONITOR",
+        "SAFETY_DOOR",
+        "TWO_HAND",
+        "MUTING",
+        "SAFE_SPEED",
+        "WATCHDOG"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "any"
+      ],
+      "iecVersion": "3.0"
+    },
+    {
+      "name": "iec-string-ext",
+      "version": "1.0.0",
+      "description": "Extended string functions — trim, case, split, contains, format, replace",
+      "author": "IECC2 Team",
+      "category": "utility",
+      "tags": [
+        "string",
+        "text",
+        "format",
+        "trim",
+        "split"
+      ],
+      "license": "MIT",
+      "downloads": 0,
+      "url": "https://suifei.github.io/iec2-registry/packages/iec-string-ext/iec-string-ext-1.0.0.ieclib",
+      "homepage": "https://suifei.github.io/iec2-registry/#/packages/iec-string-ext",
+      "source": "",
+      "pous": [
+        "TO_UPPER",
+        "TO_LOWER",
+        "TRIM",
+        "LTRIM",
+        "RTRIM",
+        "STARTS_WITH",
+        "ENDS_WITH",
+        "CONTAINS",
+        "SPLIT",
+        "REPLACE_ALL",
+        "FORMAT_INT",
+        "FORMAT_REAL"
+      ],
+      "dependencies": [],
+      "platforms": [
+        "any"
+      ],
+      "iecVersion": "3.0"
+    }
+  ]
+}

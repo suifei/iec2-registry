@@ -1,0 +1,23 @@
+{
+  "name": "iec-safety",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "Safety function blocks — E-Stop, safety door, two-hand, muting, safe speed, watchdog",
+  "license": "MIT",
+  "category": "safety",
+  "tags": ["safety", "estop", "sil", "iec61508", "watchdog"],
+  "link_type": "source",
+  "platforms": ["any"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "ESTOP_MONITOR", "kind": "FUNCTION_BLOCK" },
+    { "name": "SAFETY_DOOR", "kind": "FUNCTION_BLOCK" },
+    { "name": "TWO_HAND", "kind": "FUNCTION_BLOCK" },
+    { "name": "MUTING", "kind": "FUNCTION_BLOCK" },
+    { "name": "SAFE_SPEED", "kind": "FUNCTION_BLOCK" },
+    { "name": "WATCHDOG", "kind": "FUNCTION_BLOCK" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with 6 safety function blocks."
+}

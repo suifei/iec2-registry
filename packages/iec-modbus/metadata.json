@@ -1,0 +1,24 @@
+{
+  "name": "iec-modbus",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "Modbus TCP/RTU communication — client, register/coil read/write, serial RTU",
+  "license": "MIT",
+  "category": "protocol",
+  "tags": ["modbus", "tcp", "rtu", "serial", "rs485"],
+  "link_type": "source",
+  "platforms": ["linux-x64", "linux-arm64", "darwin-x64", "darwin-arm64"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "MODBUS_TCP_CLIENT", "kind": "FUNCTION_BLOCK" },
+    { "name": "MODBUS_READ_REGISTERS", "kind": "FUNCTION_BLOCK" },
+    { "name": "MODBUS_WRITE_REGISTER", "kind": "FUNCTION_BLOCK" },
+    { "name": "MODBUS_READ_COILS", "kind": "FUNCTION_BLOCK" },
+    { "name": "MODBUS_WRITE_COIL", "kind": "FUNCTION_BLOCK" },
+    { "name": "MODBUS_WRITE_MULTIPLE_COILS", "kind": "FUNCTION_BLOCK" },
+    { "name": "MODBUS_RTU_CLIENT", "kind": "FUNCTION_BLOCK" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with Modbus TCP and RTU serial support."
+}

@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "categories": [
+    {
+      "id": "control",
+      "name": "Control",
+      "icon": "sliders",
+      "description": "PID controllers, ramps, scaling, and process control"
+    },
+    {
+      "id": "protocol",
+      "name": "Communication Protocols",
+      "icon": "wifi",
+      "description": "Industrial communication protocol libraries"
+    },
+    {
+      "id": "safety",
+      "name": "Safety",
+      "icon": "shield",
+      "description": "Safety-related function blocks per IEC 61508/62061"
+    },
+    {
+      "id": "motion",
+      "name": "Motion Control",
+      "icon": "move",
+      "description": "PLCopen-compatible motion control function blocks"
+    },
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "icon": "bar-chart",
+      "description": "Extended math, filters, interpolation, statistics"
+    },
+    {
+      "id": "utility",
+      "name": "Utilities",
+      "icon": "tool",
+      "description": "Data logging, string manipulation, and general utilities"
+    }
+  ]
+}

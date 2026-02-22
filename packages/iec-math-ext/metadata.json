@@ -1,0 +1,26 @@
+{
+  "name": "iec-math-ext",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "Extended math — filters, interpolation, statistics, matrix, CRC",
+  "license": "MIT",
+  "category": "math",
+  "tags": ["filter", "interpolation", "statistics", "matrix", "crc"],
+  "link_type": "source",
+  "platforms": ["any"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "MOVING_AVG", "kind": "FUNCTION_BLOCK" },
+    { "name": "LOW_PASS_FILTER", "kind": "FUNCTION_BLOCK" },
+    { "name": "HIGH_PASS_FILTER", "kind": "FUNCTION_BLOCK" },
+    { "name": "LINEAR_INTERP", "kind": "FUNCTION" },
+    { "name": "LOOKUP_TABLE", "kind": "FUNCTION_BLOCK" },
+    { "name": "STATISTICS", "kind": "FUNCTION_BLOCK" },
+    { "name": "MATRIX_MUL", "kind": "FUNCTION_BLOCK" },
+    { "name": "CRC16", "kind": "FUNCTION" },
+    { "name": "CRC32", "kind": "FUNCTION" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with 9 math/signal-processing POUs."
+}

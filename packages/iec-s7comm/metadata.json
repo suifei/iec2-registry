@@ -1,0 +1,21 @@
+{
+  "name": "iec-s7comm",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "Siemens S7 communication — ISO-on-TCP, DB read/write, area read",
+  "license": "MIT",
+  "category": "protocol",
+  "tags": ["siemens", "s7", "plc", "iso-tcp", "profinet"],
+  "link_type": "source",
+  "platforms": ["any"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "S7_CLIENT", "kind": "FUNCTION_BLOCK" },
+    { "name": "S7_READ_DB", "kind": "FUNCTION_BLOCK" },
+    { "name": "S7_WRITE_DB", "kind": "FUNCTION_BLOCK" },
+    { "name": "S7_READ_AREA", "kind": "FUNCTION_BLOCK" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with S7 ISO-on-TCP communication."
+}

@@ -1,0 +1,24 @@
+{
+  "name": "iec-pid",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "PID control library — PID, PID_COMPACT, PID_AUTOTUNE, RAMP, HYSTERESIS, DEADBAND, SCALING",
+  "license": "MIT",
+  "category": "control",
+  "tags": ["pid", "control", "autotune", "ramp", "scaling"],
+  "link_type": "source",
+  "platforms": ["any"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "PID", "kind": "FUNCTION_BLOCK", "signature": "PID(ENABLE, SETPOINT, PROCESS_VALUE, KP, KI, KD, DT, OUT_MIN, OUT_MAX : LREAL) -> OUTPUT : LREAL" },
+    { "name": "PID_COMPACT", "kind": "FUNCTION_BLOCK" },
+    { "name": "PID_AUTOTUNE", "kind": "FUNCTION_BLOCK", "signature": "PID_AUTOTUNE(ENABLE, SETPOINT, PROCESS_VALUE, RELAY_AMP, DT : LREAL) -> KP_RESULT, KI_RESULT, KD_RESULT : LREAL" },
+    { "name": "RAMP", "kind": "FUNCTION_BLOCK" },
+    { "name": "HYSTERESIS", "kind": "FUNCTION_BLOCK" },
+    { "name": "DEADBAND", "kind": "FUNCTION_BLOCK" },
+    { "name": "SCALING", "kind": "FUNCTION_BLOCK" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with 7 function blocks for process control."
+}

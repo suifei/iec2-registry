@@ -1,0 +1,29 @@
+{
+  "name": "iec-string-ext",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "Extended string functions — trim, case, split, contains, format, replace",
+  "license": "MIT",
+  "category": "utility",
+  "tags": ["string", "text", "format", "trim", "split"],
+  "link_type": "source",
+  "platforms": ["any"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "TO_UPPER", "kind": "FUNCTION" },
+    { "name": "TO_LOWER", "kind": "FUNCTION" },
+    { "name": "TRIM", "kind": "FUNCTION" },
+    { "name": "LTRIM", "kind": "FUNCTION" },
+    { "name": "RTRIM", "kind": "FUNCTION" },
+    { "name": "STARTS_WITH", "kind": "FUNCTION" },
+    { "name": "ENDS_WITH", "kind": "FUNCTION" },
+    { "name": "CONTAINS", "kind": "FUNCTION" },
+    { "name": "SPLIT", "kind": "FUNCTION" },
+    { "name": "REPLACE_ALL", "kind": "FUNCTION" },
+    { "name": "FORMAT_INT", "kind": "FUNCTION" },
+    { "name": "FORMAT_REAL", "kind": "FUNCTION" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with 12 string manipulation functions."
+}

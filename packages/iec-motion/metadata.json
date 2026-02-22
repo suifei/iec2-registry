@@ -1,0 +1,23 @@
+{
+  "name": "iec-motion",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "PLCopen motion control — MC_POWER, MC_MOVE_ABSOLUTE/RELATIVE, MC_STOP, MC_HOME",
+  "license": "MIT",
+  "category": "motion",
+  "tags": ["plcopen", "motion", "axis", "servo", "drive"],
+  "link_type": "source",
+  "platforms": ["any"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "AXIS_REF", "kind": "FUNCTION_BLOCK" },
+    { "name": "MC_POWER", "kind": "FUNCTION_BLOCK" },
+    { "name": "MC_MOVE_ABSOLUTE", "kind": "FUNCTION_BLOCK" },
+    { "name": "MC_MOVE_RELATIVE", "kind": "FUNCTION_BLOCK" },
+    { "name": "MC_STOP", "kind": "FUNCTION_BLOCK" },
+    { "name": "MC_HOME", "kind": "FUNCTION_BLOCK" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with 6 PLCopen motion function blocks."
+}

@@ -1,0 +1,22 @@
+{
+  "name": "iec-datalog",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "Data logging — periodic logger, CSV writer, ring buffer, trend recorder, event logger",
+  "license": "MIT",
+  "category": "utility",
+  "tags": ["logging", "csv", "trend", "recorder", "buffer"],
+  "link_type": "source",
+  "platforms": ["any"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "DATA_LOGGER", "kind": "FUNCTION_BLOCK" },
+    { "name": "CSV_WRITER", "kind": "FUNCTION_BLOCK" },
+    { "name": "RING_BUFFER", "kind": "FUNCTION_BLOCK" },
+    { "name": "TREND_RECORDER", "kind": "FUNCTION_BLOCK" },
+    { "name": "EVENT_LOGGER", "kind": "FUNCTION_BLOCK" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with 5 data logging function blocks."
+}

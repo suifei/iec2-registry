@@ -1,0 +1,22 @@
+{
+  "name": "iec-canopen",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "CANopen protocol — NMT master, SDO read/write, PDO mapping",
+  "license": "MIT",
+  "category": "protocol",
+  "tags": ["canopen", "can", "nmt", "sdo", "pdo", "fieldbus"],
+  "link_type": "source",
+  "platforms": ["linux-x64", "linux-arm64"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "CANOPEN_MASTER", "kind": "FUNCTION_BLOCK" },
+    { "name": "CANOPEN_NMT_SEND", "kind": "FUNCTION_BLOCK" },
+    { "name": "CANOPEN_SDO_READ", "kind": "FUNCTION_BLOCK" },
+    { "name": "CANOPEN_SDO_WRITE", "kind": "FUNCTION_BLOCK" },
+    { "name": "CANOPEN_PDO_MAP", "kind": "FUNCTION_BLOCK" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with CANopen NMT, SDO, and PDO support."
+}

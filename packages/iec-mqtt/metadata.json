@@ -1,0 +1,21 @@
+{
+  "name": "iec-mqtt",
+  "version": "1.0.0",
+  "author": "IECC2 Team",
+  "description": "MQTT 3.1.1 client — connect, publish, subscribe, JSON publish",
+  "license": "MIT",
+  "category": "protocol",
+  "tags": ["mqtt", "iot", "cloud", "json", "publish", "subscribe"],
+  "link_type": "source",
+  "platforms": ["any"],
+  "iecVersion": "3.0",
+  "exports": [
+    { "name": "MQTT_CLIENT", "kind": "FUNCTION_BLOCK" },
+    { "name": "MQTT_PUBLISH", "kind": "FUNCTION_BLOCK" },
+    { "name": "MQTT_SUBSCRIBE", "kind": "FUNCTION_BLOCK" },
+    { "name": "MQTT_JSON_PUBLISH", "kind": "FUNCTION_BLOCK" }
+  ],
+  "dependencies": [],
+  "repository": "https://github.com/suifei/iec2",
+  "changelog": "Initial release with MQTT 3.1.1 client support."
+}
