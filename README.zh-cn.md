@@ -4,7 +4,7 @@
 
 [IECC2 PLC 开发工具链](https://github.com/suifei/iec2) 的公共组件注册表。
 
-在线目录请访问 **[suifei.github.io/iec2-registry](https://suifei.github.io/iec2-registry)**。
+在线目录请访问 **[suifei.github.io/iec2-registry](https://suifei.github.io/iec2-registry/)**。
 
 ## 可用组件包
 

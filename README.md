@@ -4,7 +4,7 @@
 
 Public component registry for the [IECC2 PLC development toolchain](https://github.com/suifei/iec2).
 
-Browse the online catalog at **[suifei.github.io/iec2-registry](https://suifei.github.io/iec2-registry)**.
+Browse the online catalog at **[suifei.github.io/iec2-registry](https://suifei.github.io/iec2-registry/)**.
 
 ## Available Packages
 
