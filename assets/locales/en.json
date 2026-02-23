@@ -1,6 +1,7 @@
 {
   "site.title": "IEC2 Component Registry",
   "site.subtitle": "IEC 61131-3 Component Marketplace",
+  "nav.docs": "Docs",
   "nav.compiler": "IECC2 Compiler",
   "nav.github": "GitHub",
   "nav.contribute": "Contribute",
@@ -38,5 +39,23 @@
   "install.title": "Install from VS Code",
   "install.cmd": "Ctrl+Shift+P → IEC: Manage Libraries → Online → Search & Install",
 
-  "footer.text": "© 2026 IECC2 Project · IEC 61131-3 PLC Development Toolchain ·"
+  "footer.text": "© 2026 IECC2 Project · IEC 61131-3 PLC Development Toolchain ·",
+
+  "docs.pageTitle": "IECC2 Documentation",
+  "docs.loading": "Loading...",
+  "docs.toc": "On This Page",
+  "docs.sidebarHome": "Home",
+  "docs.sidebarTutorials": "Tutorials",
+  "docs.sidebarReference": "Reference",
+  "docs.nav.home": "Overview",
+  "docs.nav.install": "Installation & Quick Start",
+  "docs.nav.firstProject": "First PLC Project",
+  "docs.nav.debugging": "Debugging & Simulation",
+  "docs.nav.advanced": "Advanced Development",
+  "docs.nav.industrial": "Industrial Deployment",
+  "docs.nav.architecture": "Architecture Design",
+  "docs.nav.langRef": "Language Reference",
+  "docs.nav.cli": "CLI Quick Start",
+  "docs.pager.prev": "← Previous",
+  "docs.pager.next": "Next →"
 }

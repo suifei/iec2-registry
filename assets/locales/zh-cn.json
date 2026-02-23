@@ -1,6 +1,7 @@
 {
   "site.title": "IEC2 组件注册表",
   "site.subtitle": "IEC 61131-3 组件市场",
+  "nav.docs": "文档",
   "nav.compiler": "IECC2 编译器",
   "nav.github": "GitHub",
   "nav.contribute": "贡献",
@@ -38,5 +39,23 @@
   "install.title": "从 VS Code 安装",
   "install.cmd": "Ctrl+Shift+P → IEC: 管理库 → 在线 → 搜索并安装",
 
-  "footer.text": "© 2026 IECC2 项目 · IEC 61131-3 PLC 开发工具链 ·"
+  "footer.text": "© 2026 IECC2 项目 · IEC 61131-3 PLC 开发工具链 ·",
+
+  "docs.pageTitle": "IECC2 文档中心",
+  "docs.loading": "加载中...",
+  "docs.toc": "本页目录",
+  "docs.sidebarHome": "首页",
+  "docs.sidebarTutorials": "入门教程",
+  "docs.sidebarReference": "参考文档",
+  "docs.nav.home": "总览",
+  "docs.nav.install": "开箱即用 — 安装与快速上手",
+  "docs.nav.firstProject": "第一个 PLC 项目",
+  "docs.nav.debugging": "调试与仿真",
+  "docs.nav.advanced": "高级开发",
+  "docs.nav.industrial": "工业化部署架构方案",
+  "docs.nav.architecture": "架构设计",
+  "docs.nav.langRef": "语言参考",
+  "docs.nav.cli": "快速入门（CLI）",
+  "docs.pager.prev": "← 上一篇",
+  "docs.pager.next": "下一篇 →"
 }

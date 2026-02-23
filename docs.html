@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="docs.pageTitle">IECC2 Documentation</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/docs.css">
+</head>
+<body class="docs-body">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration:none">
+                        <h1>IEC2 Registry</h1>
+                    </a>
+                    <span class="subtitle" data-i18n="site.subtitle">IEC 61131-3 Component Marketplace</span>
+                </div>
+                <nav>
+                    <a href="docs.html" class="nav-active" data-i18n="nav.docs">Docs</a>
+                    <a href="https://github.com/suifei/iec2" target="_blank" data-i18n="nav.compiler">IECC2 Compiler</a>
+                    <a href="https://github.com/suifei/iec2-registry" target="_blank" data-i18n="nav.github">GitHub</a>
+                    <a href="index.html#contribute" data-i18n="nav.contribute">Contribute</a>
+                    <select id="langSwitcher" class="lang-switcher">
+                        <option value="en">English</option>
+                        <option value="zh-cn">中文</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">&#9776;</button>
+            <div class="sidebar-inner">
+                <div class="sidebar-section">
+                    <h4 data-i18n="docs.sidebarHome">Home</h4>
+                    <a href="#" class="sidebar-link active" data-page="Home" data-i18n="docs.nav.home">Overview</a>
+                </div>
+                <div class="sidebar-section">
+                    <h4 data-i18n="docs.sidebarTutorials">Tutorials</h4>
+                    <a href="#" class="sidebar-link" data-page="开箱即用-—-安装与快速上手" data-order="1">
+                        <span class="sidebar-num">01</span>
+                        <span data-i18n="docs.nav.install">Installation</span>
+                    </a>
+                    <a href="#" class="sidebar-link" data-page="第一个-PLC-项目" data-order="2">
+                        <span class="sidebar-num">02</span>
+                        <span data-i18n="docs.nav.firstProject">First Project</span>
+                    </a>
+                    <a href="#" class="sidebar-link" data-page="调试与仿真" data-order="3">
+                        <span class="sidebar-num">03</span>
+                        <span data-i18n="docs.nav.debugging">Debugging</span>
+                    </a>
+                    <a href="#" class="sidebar-link" data-page="高级开发" data-order="4">
+                        <span class="sidebar-num">04</span>
+                        <span data-i18n="docs.nav.advanced">Advanced</span>
+                    </a>
+                    <a href="#" class="sidebar-link" data-page="工业化部署架构方案" data-order="5">
+                        <span class="sidebar-num">05</span>
+                        <span data-i18n="docs.nav.industrial">Industrial Deployment</span>
+                    </a>
+                </div>
+                <div class="sidebar-section">
+                    <h4 data-i18n="docs.sidebarReference">Reference</h4>
+                    <a href="#" class="sidebar-link" data-page="架构设计" data-i18n="docs.nav.architecture">Architecture</a>
+                    <a href="#" class="sidebar-link" data-page="语言参考" data-i18n="docs.nav.langRef">Language Reference</a>
+                    <a href="#" class="sidebar-link" data-page="快速入门（CLI）" data-i18n="docs.nav.cli">CLI Quick Start</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="docs-content" id="docsContent">
+            <div class="docs-article" id="docsArticle">
+                <div class="docs-loading" id="docsLoading">
+                    <div class="loading-spinner"></div>
+                    <span data-i18n="docs.loading">Loading...</span>
+                </div>
+            </div>
+            <nav class="docs-pager" id="docsPager"></nav>
+        </main>
+
+        <aside class="docs-toc" id="docsToc">
+            <h4 data-i18n="docs.toc">On This Page</h4>
+            <div id="tocList"></div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><span data-i18n="footer.text">&copy; 2026 IECC2 Project &middot; IEC 61131-3 PLC Development Toolchain &middot;</span>
+                <a href="https://github.com/suifei/iec2">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
+    <script src="assets/i18n.js"></script>
+    <script src="assets/docs.js"></script>
+</body>
+</html>
